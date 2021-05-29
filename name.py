@@ -1,0 +1,17 @@
+from PIL import Image, ImageDraw
+
+new_image = Image.new("RGB", (450, 200), (0, 0, 255))
+draw = ImageDraw.Draw(new_image)
+draw.ellipse((0, 0, 200, 200), (255, 255, 255), outline='black', width=3)
+draw.ellipse((30, 0, 250, 200), (0, 0, 255))
+draw.line((170, 0, 140, 200), fill='yellow', width=10)
+draw.line((170, 0, 200, 200), fill='yellow', width=10)
+draw.line((150, 100, 190, 100), fill='yellow', width=5)
+draw.line((220, 0, 220, 200), fill='orange', width=10)
+draw.line((280, 0, 280, 200), fill='orange', width=10)
+draw.line((340, 0, 340, 200), fill='orange', width=10)
+draw.line((220, 200, 340, 200), fill='orange', width=15)
+draw.line((400, 0, 370, 200), fill='pink', width=10)
+draw.line((400, 0, 430, 200), fill='pink', width=10)
+draw.line((380, 100, 420, 100), fill='pink', width=5)
+new_image.save("nameResult.png", "PNG")
