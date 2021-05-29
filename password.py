@@ -1,10 +1,13 @@
-def ask_password():
-    for i in range(3):
-        passwrd = input()
-        if passwrd == "password":
-            print("Пароль принят")
-            return
-    print("В доступе отказано")
+def golden_ratio(i):
+    first = 1
+    second = 1
+    for j in range(i-1):
+        temp = second
+        second += first
+        first = temp
+    print(second/first)
 
 
-ask_password()
+golden_ratio(1)
+golden_ratio(2)
+golden_ratio(4)
